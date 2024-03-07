@@ -1,5 +1,7 @@
 pipeline {
-  agent { label 'linux' }
+   agent { 
+     docker { image 'jenkins/jenkins:alpine3.19-jdk21' }
+  }
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
