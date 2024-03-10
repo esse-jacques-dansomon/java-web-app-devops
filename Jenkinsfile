@@ -9,7 +9,7 @@ pipeline {
     stage('Scan') {
       steps {
         withSonarQubeEnv(installationName: 'sq1') { 
-            sh './mvnw clean package sonar:sonar -Dsonar.projectKey=jacques-stephane'
+            sh './mvnw clean package sonar:sonar'
         }
       }
     }
